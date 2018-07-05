@@ -3,5 +3,5 @@
 return [
     'settings_column'       => 'settings',
 
-    'settings'              => [],
+    'setting_fields'        => [],
 ];
