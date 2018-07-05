@@ -17,11 +17,20 @@
             "src/helpers.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Internetcode\\LaravelUserSettings\\Tests\\": "tests"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "Internetcode\\LaravelUserSettings\\LaravelUserSettingsServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2",
+        "orchestra/testbench": "^3.6"
     }
 }

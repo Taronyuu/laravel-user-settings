@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test Suite" tests="4" assertions="22" errors="0" failures="0" skipped="0" time="0.894020">
+    <testsuite name="Internetcode\LaravelUserSettings\Tests\EmptyUserCreatedTest" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/BitwiseSettingsListGeneratedTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.254558">
+      <testcase name="an_empty_user_exists" class="Internetcode\LaravelUserSettings\Tests\EmptyUserCreatedTest" classname="Internetcode.LaravelUserSettings.Tests.EmptyUserCreatedTest" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/BitwiseSettingsListGeneratedTest.php" line="13" assertions="2" time="0.254558"/>
+    </testsuite>
+    <testsuite name="Internetcode\LaravelUserSettings\Tests\BitwiseSettingsListGeneratedTest" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/EmptyUserCreatedTest.php" tests="1" assertions="5" errors="0" failures="0" skipped="0" time="0.169532">
+      <testcase name="validate_generated_bitwise_list" class="Internetcode\LaravelUserSettings\Tests\BitwiseSettingsListGeneratedTest" classname="Internetcode.LaravelUserSettings.Tests.BitwiseSettingsListGeneratedTest" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/EmptyUserCreatedTest.php" line="15" assertions="5" time="0.169532"/>
+    </testsuite>
+    <testsuite name="Internetcode\LaravelUserSettings\Tests\InvalidSettingThrowsException" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/InvalidSettingThrowsExceptionTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.173520">
+      <testcase name="invalid_setting_throws_exception" class="Internetcode\LaravelUserSettings\Tests\InvalidSettingThrowsException" classname="Internetcode.LaravelUserSettings.Tests.InvalidSettingThrowsException" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/InvalidSettingThrowsExceptionTest.php" line="15" assertions="2" time="0.173520"/>
+    </testsuite>
+    <testsuite name="Internetcode\LaravelUserSettings\Tests\UserSettingsAreStored" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/UserSettingsAreStoredTest.php" tests="1" assertions="13" errors="0" failures="0" skipped="0" time="0.296410">
+      <testcase name="settings_are_stored" class="Internetcode\LaravelUserSettings\Tests\UserSettingsAreStored" classname="Internetcode.LaravelUserSettings.Tests.UserSettingsAreStored" file="/Users/Zander/Documents/Workspace/PackageDevelopment/packages/internetcode/laravel-user-settings/tests/UserSettingsAreStoredTest.php" line="13" assertions="13" time="0.296410"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
