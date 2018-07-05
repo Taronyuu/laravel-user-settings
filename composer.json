@@ -1,0 +1,27 @@
+{
+    "name": "internetcode/laravel-user-settings",
+    "description": "Easy boolean settings per user",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Zander van der Meer",
+            "email": "zander.meer@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Internetcode\\LaravelUserSettings\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Internetcode\\LaravelUserSettings\\LaravelUserSettingsServiceProvider"
+            ]
+        }
+    }
+}
