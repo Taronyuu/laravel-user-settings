@@ -8,7 +8,7 @@ class BitwiseConverter {
      * arrayToBitwiseList function.
      * This method will calculate the exact bit we should give to a specific settings field.
      * @NOTE: This list is ordered, moving settings will result in invalid settings.
-     * @TODO: Make this list unsorted. (ie: use a seperate order value and not the index)
+     * @TODO: Make this list unsorted. (ie: use a separate order value and not the index)
      *
      * @param array $array
      *
