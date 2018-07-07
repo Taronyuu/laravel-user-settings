@@ -31,6 +31,24 @@ trait HasSettingsTrait {
     }
 
     /**
+     * setMultipleSettings function.
+     * Update multiple setting using a multi dimensional array.
+     *
+     * @param array $settings
+     *
+     * @return array
+     * @throws InvalidUserSettingsFieldUsed
+     */
+    public function setMultipleSettings(array $settings)
+    {
+        $result = [];
+        foreach ( $settings as $setting => $value ) {
+            $result[] = $this->setSetting($setting, $value);
+        }
+        return $result;
+    }
+
+    /**
      * setSetting function.
      * Update the setting in the table.
      *

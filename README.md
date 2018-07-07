@@ -60,6 +60,15 @@ public function getSettingFields()
 $user = (new User())->whereSetting('my_setting')->first();
 ```
 
+**Set multiple settings at once**
+```php
+$user->setMultipleSettings([
+    'my_setting'        => true,
+    'my_setting_2'      => false,
+]);
+$user->save();
+```
+
 ### Installation
 First of all you should require the package using composer:
 ```

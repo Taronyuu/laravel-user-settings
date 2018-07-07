@@ -46,4 +46,20 @@ class UserSettingsAreStored extends TestCase {
         $this->assertTrue($this->testUser->getSetting('test_setting'));
     }
 
+    /** @test */
+    public function array_settings_are_stored()
+    {
+        $user = $this->testUser;
+
+        $user->setMultipleSettings([
+            'test_setting'      => true,
+            'test_setting_2'    => false,
+        ]);
+        $user->save();
+
+        $this->assertTrue($user->setting('test_setting'));
+        $this->assertFalse($user->setting('test_setting_2'));
+        $this->assertFalse($user->setting('test_setting_3'));
+    }
+
 }
