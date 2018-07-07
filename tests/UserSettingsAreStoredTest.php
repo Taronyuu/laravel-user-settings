@@ -62,4 +62,13 @@ class UserSettingsAreStored extends TestCase {
         $this->assertFalse($user->setting('test_setting_3'));
     }
 
+    /** @test */
+    public function default_values_are_returned()
+    {
+        $user = $this->testUser;
+
+        $this->assertFalse($user->getSetting('test_setting_3'));
+        $this->assertEquals('test_return_value', $user->getSetting('test_setting_3', 'test_return_value'));
+    }
+
 }

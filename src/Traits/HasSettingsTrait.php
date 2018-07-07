@@ -80,18 +80,25 @@ trait HasSettingsTrait {
      * getSetting function.
      * Returns a bool if the setting is true.
      *
-     * @param $key
+     * @param      $key
+     * @param null $default
      *
      * @return bool
      * @throws InvalidUserSettingsFieldUsed
      */
-    public function getSetting($key)
+    public function getSetting($key, $default = null)
     {
         $this->validateKey($key);
         $currentSetting = (integer)$this->getAttribute($this->getSettingsColumn());
         $bitwiseList    = $this->getBitwiseList();
 
-        return ($currentSetting & $bitwiseList[$key]) > 1 ? true : false;
+        if(($currentSetting & $bitwiseList[$key]) > 1) {
+            return true;
+        }
+        if($default !== null) {
+            return $default;
+        }
+        return false;
     }
 
     /**
