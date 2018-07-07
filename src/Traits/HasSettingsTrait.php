@@ -101,6 +101,24 @@ trait HasSettingsTrait {
     }
 
     /**
+     * scopeWhereSetting function.
+     * Adds a '->whereSetting()' method to filter on enabled settings in the database.
+     *
+     * @param $query
+     * @param $key
+     *
+     * @return mixed
+     * @throws InvalidUserSettingsFieldUsed
+     */
+    public function scopeWhereSetting($query, $key)
+    {
+        $this->validateKey($key);
+        $bit = $this->getBitwiseList()[$key];
+
+        return $query->where($this->getSettingsColumn(), '&', $bit);
+    }
+
+    /**
      * getBitwiseList function.
      * Get the converted list of settings and bits
      *
@@ -123,6 +141,7 @@ trait HasSettingsTrait {
     protected function validateKey($key)
     {
         if(!isset($this->getBitwiseList()[$key])) {
+            /** @noinspection PhpUnhandledExceptionInspection */
             throw new InvalidUserSettingsFieldUsed("Invalid settings field key given, this object is not allowed to use this key.");
         }
     }
