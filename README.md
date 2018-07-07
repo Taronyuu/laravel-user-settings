@@ -62,4 +62,4 @@ $user = (new User())->whereSetting('my_setting')->first();
 Please create an issue using the [issue tracker](https://github.com/Internetcodehq/laravel-user-settings/issues) or drop us an email.
 
 ### License
-@TODO
+[MIT](https://github.com/Internetcodehq/laravel-user-settings/blob/master/LICENSE) © Zander van der Meer
