@@ -1,6 +1,11 @@
 # Laravel user settings
 > Simple and persistent boolean settings per user.
 
+[![Build Status](https://travis-ci.org/Internetcodehq/laravel-user-settings.svg?branch=master)](https://travis-ci.org/Internetcodehq/laravel-user-settings)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+
 This package has been developed to help you store simple boolean settings (true/false or yes/no settings) per user.
 
 ### Features
