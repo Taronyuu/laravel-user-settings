@@ -61,7 +61,50 @@ $user = (new User())->whereSetting('my_setting')->first();
 ```
 
 ### Installation
-@TODO
+First of all you should require the package using composer:
+```
+composer require internetcode/laravel-user-settings
+```
+
+Afterwards you can add the service provider to your providers array. This is optional since it is already auto discovered by Laravel.
+```php
+'providers' => [
+
+        /*
+         * Laravel Framework Service Providers...
+         */
+        Illuminate\Auth\AuthServiceProvider::class,
+
+        ...
+
+        Internetcode\LaravelUserSettings\LaravelUserSettingsServiceProvider::class,
+    ],
+```
+
+Publish the config and migration files.
+```
+php artisan vendor:publish --tag=config
+php artisan vendor:publish --tag=migrations
+```
+Please note that the newly created migration file defaults to a `settings` column on the user model. Feel free to change that, or add multiple tables.
+
+On the models where you want to use the settings add the `HasSettingsTrait` trait.
+```php
+<?php
+
+namespace Internetcode\LaravelUserSettings\Tests;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Internetcode\LaravelUserSettings\Traits\HasSettingsTrait;
+
+class User extends Authenticatable
+{
+    use HasSettingsTrait;
+```
+
+### Caveats
+- ***Never*** change the order of the settings in the `setting_fields` array. Every field in here is converted based on the index of the field. Therefore changing the order/index of your setting, will result in invalid settings being true or false.
 
 ### Bugs / Issues / Ideas
 Please create an issue using the [issue tracker](https://github.com/Internetcodehq/laravel-user-settings/issues) or drop us an email.
