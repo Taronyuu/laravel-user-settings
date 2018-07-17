@@ -21,13 +21,10 @@ trait HasSettingsTrait {
     {
         $this->validateKey($key);
 
-        // If the value is not null, it means we are trying to set it. So update the value.
-        // Otherwise return the setting.
         if($value === null) {
             return $this->getSetting($key);
-        } else {
-            return $this->setSetting($key, $value);
         }
+        return $this->setSetting($key, $value);
     }
 
     /**
